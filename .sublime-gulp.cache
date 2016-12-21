@@ -1,0 +1,1 @@
+{"C:\\wamp64\\www\\testSite\\gulpfile.js":{"sha1":"48a8f9c0c32b90a987f96de2a868117de98d32c0","tasks":{"css":{"name":"css","dependencies":""},"js":{"name":"js","dependencies":""},"watch":{"name":"watch","dependencies":""},"default":{"name":"default","dependencies":"css js watch"}}}}

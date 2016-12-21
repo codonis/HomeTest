@@ -1,0 +1,40 @@
+
+@import "node_modules/bootstrap/scss/variables"
+@import "node_modules/bootstrap/scss/mixins"
+$font-stack: Helvetica, sans-serif
+$primary-color: #333
+$width: 250px 
+$lagoon-blue: fade-out(#62fdca, 0.5)
+$total: 10 //Number of .ray divs in our html
+$step: 360deg / $total //Used to compute the hue based on color-wheel
+$border-radius: 0px
+.ray
+  height: 30px
+  font: $font-stack
+  font-family: $font-stack
+
+//Add your for-loop here:
+@for $i from 1 through $total 
+  .ray:nth-child(#{$i})
+    background: adjust-hue(blue, $i * $step)
+    width: if($i % 2 == 0, 300px, 350px)
+    margin-left: if($i % 2 == 0, 0px, 50px)
+    
+   
+ 
+  
+
+.math 
+  width: $width
+  text-align: center
+  background-color: $lagoon-blue
+  color: red + blue
+  height: $width/6
+  line-height: $width/6
+  //border-radius: $width/30
+  font-size: $width/6/2
+  @include border-radius($border-radius)
+
+body
+  font: 100% $font-stack
+  color: $primary-color
